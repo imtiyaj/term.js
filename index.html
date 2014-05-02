@@ -36,7 +36,7 @@
 <script>
 ;(function() {
   window.onload = function() {
-    var socket = io.connect('http://192.168.1.205:8080');
+    var socket = io.connect();
     socket.on('connect', function() {
       var term = new Terminal({
         cols: 80,
@@ -61,6 +61,8 @@
         term.write(data);
       });
       socket.emit('browser', "Connection From Browser");
+
+
       socket.on('disconnect', function() {
         term.destroy();
       });
@@ -68,3 +70,4 @@
   };
 }).call(this);
 </script>
+

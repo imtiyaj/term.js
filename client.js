@@ -147,8 +147,8 @@ io.sockets.on('connection', function(sock) {
 //var mysocket = io.connect('http://pisignage.com');
 
 var ioclient = require('socket.io-client');
-//var mysocket= ioclient.connect('http://pisignage.com:8080', { 'force new connection': true })
-var mysocket= ioclient.connect('http://192.168.1.205:8080', { 'force new connection': true })
+var mysocket= ioclient.connect('http://pisignage.com:8080', { 'force new connection': true })
+//var mysocket= ioclient.connect('http://192.168.1.205:8080', { 'force new connection': true })
 
 
 mysocket.on('connect', function(sock) {
@@ -170,5 +170,6 @@ mysocket.on('connect', function(sock) {
     }
 
 });
+
 
 
